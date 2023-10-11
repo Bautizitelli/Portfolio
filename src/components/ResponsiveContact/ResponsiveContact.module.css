@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Roboto+Slab:wght@200&display=swap');
+
+.contact {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    width: 90vw;
+    margin: auto;
+    margin-top: 5vh;
+  }
+
+  .textContainer{
+    background-color: rgba(231, 231, 231);
+    padding: 15px;
+    /* width: max-content; */
+    box-shadow: 1px 0px 15px 0px rgba(0, 0, 0, 0.3); 
+    width: 92vw;
+    margin-left: auto; 
+  }
+
+  .textHeader{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    margin: auto;
+    width: 85vw;
+  }
+  
+  .text {
+    font-size: 1.4rem;
+    width: 85vw;
+    line-height: normal;
+  }
+
+  .contactList{
+    list-style: none;
+    line-height: 2;
+    margin-top: 20px;
+    margin: auto;
+  }
+
+  .cvLink{
+    text-decoration: none;
+    color: white;
+  }
+
+  .wppLink{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+
+  .button{
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vw;
+    height: 50px;
+  }
+
+  .iconButton {
+    background-color: rgba(231, 231, 231);
+    /* padding: 0; */
+    border: none;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer; 
+    margin-left: 20px;
+  }
+
+  .links{
+    text-decoration: none;
+    color: black;
+    /* margin-right: 5px */
+  }
+
+  .icon {
+    font-size: 40px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding: 0;
+  }
+
+  .email{
+    font-weight: bold;
+  }

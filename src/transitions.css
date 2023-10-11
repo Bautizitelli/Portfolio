@@ -1,0 +1,17 @@
+.route-section-enter {
+    margin-top: -100vh;
+  }
+  
+  .route-section-enter-active {
+    margin-top: 0;
+    transition: margin-top 300ms ease-in-out;
+  }
+  
+  .route-section-exit {
+    margin-top: 0;
+  }
+  
+  .route-section-exit-active {
+    margin-top: 30vh;
+    transition: margin-top 300ms ease-in-out;
+  }

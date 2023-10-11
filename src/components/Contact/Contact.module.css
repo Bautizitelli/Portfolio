@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Roboto+Slab:wght@200&display=swap');
+
+
+.contact {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    height: 80vh; 
+  }
+  .textContainer{
+    background-color: rgba(231, 231, 231);
+    padding: 25px;
+    width: max-content;
+    box-shadow: 1px 0px 15px 0px rgba(0, 0, 0, 0.3); 
+
+  }
+  .textHeader{
+    font-size: 4rem;
+    font-weight: bolder;
+    margin-bottom: 20px;
+  }
+  
+  .text {
+    font-size: 1.4rem;
+    text-align: center;
+    max-width: 600px;
+  }
+
+  .contactList{
+    list-style: none;
+    line-height: 2;
+    margin-top: 20px;
+  }
+
+  .cvLink{
+    text-decoration: none;
+    color: white;
+  }
+  .wppLink{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+
+  .button{
+    margin: 20px;
+  }
+
+
+
+  .iconButton {
+    background-color: rgba(231, 231, 231);
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer; 
+  }
+  .links{
+    text-decoration: none;
+    color: black;
+  }
+  .icon {
+    font-size: 40px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding: 0;
+  }

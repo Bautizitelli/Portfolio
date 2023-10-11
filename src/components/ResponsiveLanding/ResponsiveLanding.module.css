@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Roboto+Slab:wght@200&display=swap');
+
+
+.landing {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+  }
+
+  .textContainer{
+    margin-top: 45px;
+    background-color: rgba(231, 231, 231);
+    padding: 20px;
+    width: 90vw;
+    box-shadow: 1px 0px 15px 0px rgba(0, 0, 0, 0.3); 
+  }
+
+  .textHeader{
+    font-size: 1.8rem;
+    font-weight: bolder;
+    margin-bottom: 20px;
+  }
+  
+  .text {
+    font-size: 1.2rem;
+    max-width: 88vw;
+    /* margin-left: 90px; */
+  }
