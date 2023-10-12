@@ -18,7 +18,8 @@ import { useLanguage } from '../LanguageContext';
     ? 'Podés contactarme por los siguientes medios, haciendo clic en los iconos:'
     : 'You can contact me through the following means by clicking on the icons:'
 
-    const cvButton = language === 'es'? 'Descargar mi cv': 'Download my resume'
+    const resumeButton = language === 'es'? 'Descargar mi cv': 'Download my resume'
+    const resume = language === 'es' ? './Bautista-Zitelli-ES.pdf' : './Bautista-Zitelli-EN.pdf'
 
     return (
       <div className={style.contact}>
@@ -64,7 +65,7 @@ import { useLanguage } from '../LanguageContext';
           </ul> 
         </div>
             <Button className={style.button} variant="dark" >
-                 <a className={style.cvLink} href='./BautistaZitelli.pdf' download target="_blank">{cvButton}</a>
+                 <a className={style.cvLink} href={resume} download >{resumeButton}</a>
              </Button>  
       </div>
     );
