@@ -1,5 +1,4 @@
 import React from "react"
-import { useState } from 'react';
 import style from './Proyects.module.css'
 import { Button, Container, Row, Col, Card } from 'react-bootstrap'
 import { FaReact, FaNodeJs } from 'react-icons/fa'
