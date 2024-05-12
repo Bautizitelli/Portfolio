@@ -1,10 +1,11 @@
 import React from "react"
+import { useState } from 'react';
 import style from './Proyects.module.css'
 import { Button, Container, Row, Col, Card } from 'react-bootstrap'
 import { FaReact, FaNodeJs } from 'react-icons/fa'
-import { SiJavascript, SiSequelize, SiRedux, SiHtml5, SiCss3 } from 'react-icons/si'
+import { SiJavascript, SiSequelize, SiRedux, SiHtml5, SiCss3, SiTailwindcss  } from 'react-icons/si'
 import { useLanguage } from '../LanguageContext';
-
+import Carousel from 'react-bootstrap/Carousel';
 
 const Proyects=()=>{
   const { language } = useLanguage();
@@ -18,19 +19,56 @@ const Proyects=()=>{
 
   return (
     <div className={style.proyects}>
-        <div className={style.textContainer}>
-        <h2 className={style.textHeader}>{header}</h2>
-        <Container>
-      <Row>
-        <Col>
-          <Card className={style.proyectCard}>
-            <Card.Body>
-              <Card.Title className={style.proyectTitle}>
+      <div className={style.textContainer}>
+      <h2 className={style.textHeader}>{header}</h2>
+      <Carousel interval={1000000} data-bs-theme="dark">
+      <Carousel.Item>
+        <Card className={style.cardContainer}>
+        <Card.Body>
+          <Card.Title className={style.proyectTitle}>
+            URVIG
+          </Card.Title>
+          <Card.Text className={style.proyectDescription}>
                 {language === 'es' 
-                ? 'Proyecto Individual de Henry:'
-                : `Henry's individual proyect: `}
-                </Card.Title>
-              <Card.Text className={style.proyectDescription}>
+                ? `Renové por completo el sitio web de URVIG S.R.L, priorizando la practicidad y la navegación intuitiva. Utilicé React,
+                JavaScript y Tailwind CSS para crear una experiencia dinámica y eficiente en una variedad de dispositivos.
+                Gestioné tanto el desarrollo como el despliegue, asegurando un rendimiento óptimo y una identidad visual coherente con la marca.`
+                : `
+                I completely revamped URVIG S.R.L's website, prioritizing practicality and intuitive navigation. I used React, JavaScript, 
+                and Tailwind CSS to create a dynamic and efficient experience across a variety of devices. I managed both development and deployment, 
+                ensuring optimal performance and a visually consistent brand identity.`}
+                <br/>{technologies}<br/>
+              </Card.Text>
+              <Card.Text>
+                <Container>
+                  <Row>
+                    <Col> <div className={style.techContainer}><span ><FaReact/> React</span></div> </Col>
+                    <Col> <div className={style.techContainer}><span ><SiTailwindcss /> Tailwind CSS</span></div> </Col>
+                  </Row>
+                  <Row>
+                    <Col> <div className={style.techContainer}><span ><SiJavascript/> JavaScript</span></div> </Col>
+                    <Col> <div className={style.techContainer}><span ><SiCss3/> CSS</span></div> </Col>
+                  </Row> 
+                </Container>                
+              </Card.Text>     
+              <span className={`d-flex justify-content-center ${style.buttonContainer}`}>
+              <Button href='https://github.com/Bautizitelli/Urvig' target="_blank" rel="noopener noreferrer" variant="dark">{repository}</Button>
+            </span>   
+            <span className={`d-flex justify-content-center ${style.buttonContainer}`}>
+              <Button href='https://www.urvig.com.ar/' target="_blank" rel="noopener noreferrer" variant="dark">{deployedProyect}</Button>
+            </span>    
+        </Card.Body>
+      </Card>
+      </Carousel.Item>
+      <Carousel.Item>
+        <Card className={style.cardContainer}>
+        <Card.Body>
+          <Card.Title className={style.proyectTitle}>
+            {language === 'es' 
+            ? 'Proyecto Individual de Henry:'
+            : `Henry's individual proyect: `}
+          </Card.Title>
+          <Card.Text className={style.proyectDescription}>
                 {language === 'es' 
                 ? `Desarrollé una aplicación web individual en el bootcamp de Henry que permite explorar
                   países con una interfaz intuitiva. Destaco mis habilidades en Front End y Back End.`
@@ -52,15 +90,17 @@ const Proyects=()=>{
                     <Col></Col>
                   </Row> 
                 </Container>                
-              </Card.Text>                
-            </Card.Body>           
-          </Card>
-            <span className={`d-flex justify-content-center ${style.buttonContainer}`}>
+              </Card.Text>     
+              <span className={`d-flex justify-content-center ${style.buttonContainer}`}>
               <Button href='https://github.com/Bautizitelli/Henry-Countries-PI' target="_blank" rel="noopener noreferrer" variant="dark">{repository}</Button>
-            </span>
-        </Col>
-        <Col>
-          <Card className={style.proyectCard}>
+            </span>       
+        </Card.Body>
+      </Card>
+      </Carousel.Item>
+      {/*  */}
+
+      <Carousel.Item>
+      <Card className={style.cardContainer}>
             <Card.Body>
               <Card.Title className={style.proyectTitle}>
                 {language === 'es' 
@@ -88,6 +128,7 @@ const Proyects=()=>{
                     <Col> <div className={style.techContainer}><span><SiRedux/> Redux</span></div> </Col>
                     <Col> <div className={style.techContainer}><span><img src="/reactadmin-logo.png" height='12px' alt="not found"/>React Admin </span></div></Col>
                   </Row>
+                  
                   <Row>
                     <Col> <Button href='https://github.com/alemannc/Super-market-shop' 
                             target="_blank" rel="noopener noreferrer"
@@ -100,14 +141,16 @@ const Proyects=()=>{
                   </Row>
                 </Container>                
               </Card.Text> 
-            </Card.Body>
-          </Card>
-            <span className={`d-flex justify-content-center ${style.buttonContainer}`}>
+              <span className={`d-flex justify-content-center ${style.buttonContainer}`}>
               <Button href='https://supermarketpreview.vercel.app' target="_blank" rel="noopener noreferrer" variant="dark">{deployedProyect}</Button>
             </span>
-        </Col>
-        <Col>
-          <Card className={style.proyectCard}>
+            </Card.Body>
+          </Card>
+      </Carousel.Item>
+      {/*  */}
+
+      <Carousel.Item>
+      <Card className={style.cardContainer}>
             <Card.Body>
               <Card.Title className={style.proyectTitle}>Landing page para un local comercial :</Card.Title>
               <Card.Text className={style.proyectDescription}>
@@ -137,12 +180,8 @@ const Proyects=()=>{
               </span>
             </Card.Body>
           </Card>
-            <div className={`d-flex justify-content-center ${style.buttonContainer}`}>
-              <Button href='https://bautizitelli.github.io/' target="_blank" rel="noopener noreferrer" variant="dark">{deployedProyect}</Button>
-            </div>
-        </Col>
-      </Row>
-    </Container>
+      </Carousel.Item>
+    </Carousel>
       </div>
     </div>
   );
