@@ -1,6 +1,6 @@
 import { Carousel, Button, Container, Row, Col, Card } from 'react-bootstrap/';
 import { FaReact, FaNodeJs } from 'react-icons/fa'
-import { SiJavascript, SiSequelize, SiRedux, SiHtml5, SiCss3 } from 'react-icons/si'
+import { SiJavascript, SiSequelize, SiRedux, SiHtml5, SiCss3, SiTailwindcss } from 'react-icons/si'
 import style from './CarrouselProyects.module.css'
 import { useLanguage } from '../LanguageContext';
 
@@ -22,7 +22,45 @@ function CarrouselProyects() {
          <h2 className={style.textHeader}>{header}</h2>
          <h5 className={style.slideText}>{slideText}</h5>
         </div> 
-    <Carousel className={style.carrouselContainer}>
+    <Carousel className={style.carrouselContainer} interval={1000000}>
+      <Carousel.Item>
+      <Card className={style.proyectCard}>
+             <Card.Body>
+               <Card.Title className={style.proyectTitle}>
+               URVIG
+               </Card.Title>
+               <Card.Text className={style.proyectDescription}>
+               {language === 'es' 
+                ? `Renové por completo el sitio web de URVIG S.R.L, priorizando la practicidad y la navegación intuitiva. Utilicé React,
+                JavaScript y Tailwind CSS para crear una experiencia dinámica y eficiente en una variedad de dispositivos.
+                Gestioné tanto el desarrollo como el despliegue, asegurando un rendimiento óptimo y una identidad visual coherente con la marca.`
+                : 
+                `I completely revamped URVIG S.R.L's website, prioritizing practicality and intuitive navigation. I used React, JavaScript, 
+                and Tailwind CSS to create a dynamic and efficient experience across a variety of devices. I managed both development and deployment, 
+                ensuring optimal performance and a visually consistent brand identity.`}
+                <br/>{technologies}<br/>
+               </Card.Text>
+               <Card.Text>
+               <Container>
+                  <Row>
+                    <Col> <div className={style.techContainer}><span ><FaReact/> React</span></div> </Col>
+                    <Col> <div className={style.techContainer}><span ><SiTailwindcss /> Tailwind CSS</span></div> </Col>
+                  </Row>
+                  <Row>
+                    <Col> <div className={style.techContainer}><span ><SiJavascript/> JavaScript</span></div> </Col>
+                    <Col> <div className={style.techContainer}><span ><SiCss3/> CSS</span></div> </Col>
+                  </Row> 
+                </Container>               
+               </Card.Text>                
+             </Card.Body>           
+           </Card>
+           <span className={`d-flex justify-content-center ${style.buttonContainer}`}>
+              <Button href='https://github.com/Bautizitelli/Urvig' target="_blank" rel="noopener noreferrer" variant="dark">{repository}</Button>
+            </span>   
+            <span className={`d-flex justify-content-center ${style.buttonContainer}`}>
+              <Button href='https://www.urvig.com.ar/' target="_blank" rel="noopener noreferrer" variant="dark">{deployedProyect}</Button>
+            </span>
+      </Carousel.Item>
       <Carousel.Item>
       <Card className={style.proyectCard}>
              <Card.Body>

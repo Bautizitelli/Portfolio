@@ -20,7 +20,7 @@ const Proyects=()=>{
     <div className={style.proyects}>
       <div className={style.textContainer}>
       <h2 className={style.textHeader}>{header}</h2>
-      <Carousel interval={1000000} data-bs-theme="dark">
+      <Carousel interval={1000000} >
       <Carousel.Item>
         <Card className={style.cardContainer}>
         <Card.Body>
@@ -96,7 +96,6 @@ const Proyects=()=>{
         </Card.Body>
       </Card>
       </Carousel.Item>
-      {/*  */}
 
       <Carousel.Item>
       <Card className={style.cardContainer}>
@@ -146,7 +145,6 @@ const Proyects=()=>{
             </Card.Body>
           </Card>
       </Carousel.Item>
-      {/*  */}
 
       <Carousel.Item>
       <Card className={style.cardContainer}>

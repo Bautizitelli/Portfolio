@@ -29,7 +29,7 @@
 
 .proyectTitle{
   font-weight: bolder;
-  font-size:xx-large;
+  font-size:small;
   color: black;
 }
 
@@ -59,9 +59,9 @@
 
 
 .cardContainer{
+  padding: 1rem;
   width:80%;
-  /* height: auto; */
   margin: auto;
   margin-bottom: 40px;
-  background-color: white;
+  background-color:white
 }

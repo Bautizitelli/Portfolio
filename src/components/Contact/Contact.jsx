@@ -19,7 +19,7 @@ import { useLanguage } from '../LanguageContext';
   : 'You can contact me through the following means by clicking on the icons:'
 
   const resumeButton = language === 'es'? 'Descargar mi cv': 'Download my resume'
-  const resume = language === 'es' ? './Bautista-Zitelli-ES.pdf' : './Bautista-Zitelli-EN.pdf'
+  const resume = language === 'es' ? './CV-BautistaZitelli.pdf' : './CV-BautistaZitelli-en.pdf'
 
        return (
          <div className={style.contact}>
